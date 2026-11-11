@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-coffee-50: #fdf8f0;
+  --color-coffee-100: #f5e9d3;
+  --color-coffee-200: #e8d0a9;
+  --color-coffee-300: #d4ae78;
+  --color-coffee-400: #c08b4f;
+  --color-coffee-500: #a86f35;
+  --color-coffee-600: #8b5a2b;
+  --color-coffee-700: #6b4220;
+  --color-coffee-800: #4a2e15;
+  --color-coffee-900: #2c1a0a;
+  --color-amber-warm: #f59e0b;
+  --color-cream: #fefce8;
+
+  --font-display: 'Playfair Display', serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-coffee-50);
+  color: var(--color-coffee-900);
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #printable-bill, #printable-bill * {
+    visibility: visible;
+  }
+  #printable-bill {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+}
